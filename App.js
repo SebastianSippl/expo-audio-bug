@@ -15,7 +15,6 @@ async function stopSound() {
 }
 
 function playSound() {
-  console.log("Playing");
   try {
     if (!player) {
       player = createAudioPlayer(breakEnd);
@@ -27,11 +26,6 @@ function playSound() {
         }
       });
     } else if (player) {
-      stopSound();
-    }
-
-    if (player) {
-      player.seekTo(0);
       player.play();
     }
   } catch (error) {
